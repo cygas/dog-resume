@@ -13,6 +13,7 @@ const Page: React.FC = () => {
           </Heading>
           <p>Digital Craftzman ( Artist / Developer / Designer / Skater )</p>
         </Box>
+        
       </Box>
     </Container>
   );
