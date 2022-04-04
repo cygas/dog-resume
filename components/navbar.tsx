@@ -15,8 +15,8 @@ import {
   useColorModeValue
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-// import ThemeToggleButton from "./theme-toggle-button";
-// import { IoLogoGithub } from "react-icons/io5";
+import ThemeToggleButton from "./theme-toggle-button";
+import { IoLogoGithub } from "react-icons/io5";
 import { ReactChild, ReactChildren } from "react";
 
 type LinkItemProps = {
@@ -38,7 +38,7 @@ const LinkItem: React.FC<LinkItemProps> = ({
   ...props
 }) => {
   const active = path === href;
-  const inactiveColor = useColorModeValue("gray.200", "whiteAlpha.900");
+  const inactiveColor = useColorModeValue("gray200", "whiteAlpha.900");
 
   return (
     <NextLink href={href} passHref>
@@ -106,13 +106,12 @@ const Navbar: React.FC<NavbarProps> = ({ path, ...props }) => {
             style={{ gap: 4 }}
             pl={2}
           >
-            {/* <IoLogoGithub /> */}
+            <IoLogoGithub />
             Source
           </LinkItem>
         </Stack>
-
         <Box flex={1} alignItems="right">
-          {/* <ThemeToggleButton /> */}
+          <ThemeToggleButton />
           <Box ml={2} display={{ base: "inline-block", md: "none" }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
@@ -133,7 +132,7 @@ const Navbar: React.FC<NavbarProps> = ({ path, ...props }) => {
                 </NextLink>
                 <MenuItem
                   as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
+                  href="https://github.com/cygas/dog-resume"
                 >
                   View Source
                 </MenuItem>
